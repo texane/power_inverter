@@ -1,0 +1,161 @@
+--
+desc: ldo voltage regulator 10 v
+url: http://fr.farnell.com/texas-instruments/lm2940t-10-0/regulateur-ldo-10v/dp/9493522
+ref farnell: 9493522
+ref fabricant:
+price: 1.80 euros
+qtity: 1 to 5
+eagle: lm2940t_10
+
+--
+desc: capa 10 nf
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 30
+eagle:
+
+--
+desc: capa 20 nf
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 30
+eagle:
+
+--
+desc: capa 470 nf
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
+desc: capa 1 uf
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 30
+eagle:
+
+--
+desc: capa 6.8 uf
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 20
+eagle:
+
+--
+desc: capa pol electrolyte 22 uf
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
+desc: resistor 10 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
+desc: resistor 100 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 30
+eagle:
+
+--
+desc: resistor 187 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 30
+eagle:
+
+--
+desc: resistor 200 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 30
+eagle:
+
+--
+desc: resistor 500 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
+desc: resistor 1.21 M
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
+desc: tle2426 rail splitter
+url: http://fr.farnell.com/texas-instruments/tle2426id/reference-masse-virtuelle/dp/8454833
+ref farnell: 8454833
+ref fabricant: tle2426id
+price: 1.90
+qtity: 1
+eagle: tle2426id
+
+--
+desc: ampli op
+url: http://fr.farnell.com/texas-instruments/tl084acd/ampli-op-cms-entree-jfet-quad/dp/9593420
+ref farnell: 9593420
+ref fabricant: tl084acd
+price: 0.56
+qtity: 5
+eagle: tl084acd
+
+--
+desc: diode
+url: http://fr.farnell.com/diodes-inc/1n4448ws-7-f/diode-de-commutation-75v0-2wsod/dp/1843752
+ref farnell: 1843752
+ref fabricant: 1N4448WS-7-F
+price: 0.24
+qtity: 10
+eagle:
+
+--
+desc: TEXAS INSTRUMENTS - LM358AD - AMPLI OP DOUBLE FAIBLE PUISS SOIC8 358
+url: http://fr.farnell.com/texas-instruments/lm358ad/ampli-op-double-faible-puiss-soic8/dp/7527007
+ref farnell: 7527007
+ref fabricant: LM358AD
+price: 0.26
+qtity: 4
+eagle: lm358ad
+
+--
+desc:
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity:
+eagle:

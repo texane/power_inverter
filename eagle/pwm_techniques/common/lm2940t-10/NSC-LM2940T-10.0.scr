@@ -1,0 +1,67 @@
+# Created by Ultra Librarian Gold 5.3.88 Copyright © 1999-2010
+# Tanvir Mohammed, Premier Farnell
+
+Grid mil;
+Set Wire_Bend 2;
+
+
+Edit 'TO254P470X1016X2222-3P.pac';
+Change Drill 54;
+Pad '1' Square 0 R0 (-200 -40);
+Change Drill 54;
+Pad '2' Round 0 R0 (-100 -40);
+Change Drill 54;
+Pad '3' Round 0 R0 (0 -40);
+Layer 21;
+Wire 6 (-308 -112) (108 -112);
+Wire 6 (108 -112) (108 72);
+Wire 6 (108 72) (-308 72);
+Wire 6 (-308 72) (-308 -112);
+Layer 51;
+Wire 6 (-308 -112) (108 -112);
+Wire 6 (108 -112) (108 72);
+Wire 6 (108 72) (-308 72);
+Wire 6 (-308 72) (-308 -112);
+Layer 25;
+Change Size 82;
+Change Ratio 10;
+Text '>NAME' SR0 (-293 100);
+Layer 27;
+Change Size 82;
+Change Ratio 10;
+Text '>VALUE' SR0 (-321 -218);
+
+Edit 'LM2940T-10.0.sym';
+Layer 94;
+Pin 'IN' In None Middle R0 Both 0 (-700 -100);
+Pin 'GND' Pas None Middle R0 Both 0 (-700 -200);
+Pin 'OUT' Out None Middle R180 Both 0 (700 -200);
+Wire 16 (-500 100) (-500 -400);
+Wire 16 (-500 -400) (500 -400);
+Wire 16 (500 -400) (500 100);
+Wire 16 (500 100) (-500 100);
+Layer 97;
+Layer 95;
+Change Size 82;
+Change Ratio 10;
+Text '>NAME' SR0 (-216 179);
+Layer 96;
+Change Size 82;
+Change Ratio 10;
+Text '>VALUE' SR0 (-180 -508);
+
+Edit 'LM2940T-10.0.dev';
+Prefix 'U';
+Description 'IC, LDO VOLT REG, 10V, 1A';
+Value Off;
+Add LM2940T-10.0 'A' Next  0 (0 0);
+Package 'TO254P470X1016X2222-3P';
+Technology '';
+Attribute OC_FARNELL '9493522';
+Attribute Supplier 'NATIONAL SEMICONDUCTOR';
+Attribute MPN 'LM2940T-10.0';
+Attribute OC_NEWARK '41K4613';
+Attribute Package 'TO-220';
+Connect 'A.IN' '1';
+Connect 'A.GND' '2';
+Connect 'A.OUT' '3';

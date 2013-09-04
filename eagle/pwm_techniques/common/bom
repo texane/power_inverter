@@ -8,6 +8,15 @@ qtity: 1 to 5
 eagle: lm2940t_10
 
 --
+desc: capa 1 nf
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 30
+eagle:
+
+--
 desc: capa 10 nf
 url:
 ref farnell:
@@ -98,6 +107,15 @@ qtity: 10
 eagle:
 
 --
+desc: resistor 25 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
 desc: resistor 100 K
 url:
 ref farnell:
@@ -179,13 +197,22 @@ qtity: 4
 eagle: lm358ad
 
 --
-desc: EXAS INSTRUMENTS - TL494CD - IC, CONTROLLER, PWM, SMD, SOIC16 
+desc: TEXAS INSTRUMENTS - TL494CD - IC, CONTROLLER, PWM, SMD, SOIC16 
 url: http://fr.farnell.com/texas-instruments/tl494cd/ic-controller-pwm-smd-soic16/dp/1470531
 ref farnell: 1470531
 ref fabricant: TL494CD
 price: 0.66
 qtity: 5
 eagle: tl494cd
+
+--
+desc: TEXAS INSTRUMENTS - SN74HC04D - INVERSSEUR HEX CMS 
+url: http://fr.farnell.com/texas-instruments/sn74hc04d/inversseur-hex-cms/dp/9590943
+ref farnell: 9590943
+ref fabricant: SN74HC04D
+price: 0.26
+qtity: 5
+eagle: sn74hc04d
 
 --
 desc:

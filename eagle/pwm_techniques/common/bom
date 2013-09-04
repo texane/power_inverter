@@ -179,6 +179,15 @@ qtity: 4
 eagle: lm358ad
 
 --
+desc: EXAS INSTRUMENTS - TL494CD - IC, CONTROLLER, PWM, SMD, SOIC16 
+url: http://fr.farnell.com/texas-instruments/tl494cd/ic-controller-pwm-smd-soic16/dp/1470531
+ref farnell: 1470531
+ref fabricant: TL494CD
+price: 0.66
+qtity: 5
+eagle: tl494cd
+
+--
 desc:
 url:
 ref farnell:

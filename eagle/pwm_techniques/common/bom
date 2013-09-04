@@ -62,7 +62,34 @@ qtity: 10
 eagle:
 
 --
+desc: resistor 5 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
 desc: resistor 10 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
+desc: resistor 18 K
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
+desc: resistor 20 K
 url:
 ref farnell:
 ref fabricant:

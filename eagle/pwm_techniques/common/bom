@@ -1,13 +1,4 @@
 --
-desc: ldo voltage regulator 10 v
-url: http://fr.farnell.com/texas-instruments/lm2940t-10-0/regulateur-ldo-10v/dp/9493522
-ref farnell: 9493522
-ref fabricant:
-price: 1.80 euros
-qtity: 1 to 5
-eagle: lm2940t_10
-
---
 desc: capa 1 nf
 url:
 ref farnell:
@@ -158,6 +149,24 @@ ref farnell:
 ref fabricant:
 price:
 qtity: 10
+eagle:
+
+--
+desc: ldo voltage regulator 10 v
+url: http://fr.farnell.com/texas-instruments/lm2940t-10-0/regulateur-ldo-10v/dp/9493522
+ref farnell: 9493522
+ref fabricant:
+price: 1.80 euros
+qtity: 2 to 5
+eagle: lm2940t_10
+
+--
+desc: FAIRCHILD SEMICONDUCTOR - LM7805ACT - LDO 2VDO 1A 5V 3TO220
+url: http://fr.farnell.com/fairchild-semiconductor/lm7805act/ldo-2vdo-1a-5v-3to220/dp/2296047
+ref farnell: 2296047
+ref fabricant: LM7805ACT
+price: 0.57
+qtity: 2 to 5
 eagle:
 
 --

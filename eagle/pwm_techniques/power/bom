@@ -1,11 +1,28 @@
+todo: m3 screw
+todo: heatsink
+todo: caps
+todo: diodes
+todo: inductor
+todo: connectors
+
 --
-desc: 
+desc: INTERNATIONAL RECTIFIER - IR2304SPBF - DRIVER DE MOSFET CMS HI & LOW SIDE
 url: http://fr.farnell.com/international-rectifier/ir2304spbf/driver-de-mosfet-cms-hi-low-side/dp/1023256
 ref farnell: 1023256
 ref fabricant: IR2304SPBF
 price: 1.87
 qtity: 2
-eagle:
+eagle: ir2304
+
+--
+desc: VISHAY FORMERLY I.R. - IRFP460APBF - TRANS. MOSFET CANAL N TO-247AC 500V 20A
+url: http://fr.farnell.com/vishay-formerly-i-r/irfp460apbf/trans-mosfet-canal-n-to-247ac-500v/dp/8649421
+ref farnell: 8649421
+ref fabricant: IRFP460APBF
+price: 4.67
+qtity: 6
+eagle: irfp460a
+
 
 --
 desc:

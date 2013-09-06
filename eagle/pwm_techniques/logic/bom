@@ -31,7 +31,7 @@ url:
 ref farnell:
 ref fabricant:
 price:
-qtity: 10
+qtity: 20
 eagle:
 
 --
@@ -58,6 +58,15 @@ url:
 ref farnell:
 ref fabricant:
 price:
+qtity: 10
+eagle:
+
+--
+desc: BOURNS - 3364W-1-203E - POT. TRIMMER 20K 25% 1 TOUR CMS
+url: http://fr.farnell.com/bourns/3364w-1-203e/pot-trimmer-20k-25-1-tour-cms/dp/2321847
+ref farnell: 2321847
+ref fabricant: 3364W-1-203E
+price: 0.55
 qtity: 10
 eagle:
 

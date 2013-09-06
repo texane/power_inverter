@@ -4,8 +4,10 @@ the schmitt trigger is a square wave oscillator
 
 general frequency formula available at:
 http://www.cirvirlab.com/index.php/tutorials/87-op-amp-relaxation-oscillator.html
-t = 2 * R_f * ln(1 + (2 * R_3 / R_2))
+t = 2 * C * R_f * ln(1 + (2 * R_3 / R_2))
 f = 1 / t
+
+if R_f = 10.7k -> 50hz
 
 TODO: simulation
 
@@ -13,6 +15,8 @@ TODO: simulation
 [ butterworth low pass filter ]
 
 sallen - key topology
+
+1 / (2 * pi * R * sqrt(C_1 * C_2))
 
 http://en.wikipedia.org/wiki/Butterworth_filter
 

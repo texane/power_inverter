@@ -17463,7 +17463,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="C15" library="rcl" deviceset="C-EU" device="C1206" value="20n"/>
 <part name="C16" library="rcl" deviceset="C-EU" device="C1206" value="10n"/>
 <part name="C17" library="rcl" deviceset="C-EU" device="C1206" value="10n"/>
-<part name="R8" library="resistor" deviceset="R-EU_" device="M1206" value="500K"/>
+<part name="R8" library="resistor" deviceset="R-EU_" device="M1206" value="625K"/>
 <part name="TL084ACD_1" library="tl084acd" deviceset="TL084ACD" device=""/>
 <part name="C18" library="rcl" deviceset="C-EU" device="C1206" value="1u"/>
 <part name="C19" library="rcl" deviceset="C-EU" device="C1206" value="1u"/>
@@ -17529,9 +17529,11 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <text x="-20.32" y="86.36" size="1.778" layer="97">WARNING: actually a LM2940T, 7805T used only for footprint</text>
 <text x="-60.96" y="101.6" size="1.778" layer="97">battery connector</text>
 <text x="551.18" y="101.6" size="1.778" layer="97">output connector</text>
-<text x="111.76" y="17.78" size="1.778" layer="97">38 - 77 hz sine wave generation stage</text>
+<text x="111.76" y="20.32" size="1.778" layer="97">38 - 77 hz square wave generation stage</text>
 <text x="119.38" y="-22.86" size="1.778" layer="97">butterworth filter (fc = 50hz)</text>
 <text x="119.38" y="-53.34" size="1.778" layer="97">butterworth filter (fc = 90hz)</text>
+<text x="111.76" y="17.78" size="1.778" layer="97">if R_VAR = 10.7K, freq = 50 hz</text>
+<text x="119.38" y="-86.36" size="1.778" layer="97">high pass filter (fc = 25hz)</text>
 </plain>
 <instances>
 <instance part="U2" gate="A" x="12.7" y="-22.86"/>

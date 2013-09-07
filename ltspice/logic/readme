@@ -1,0 +1,3 @@
+add tl494 into your spice components:
+cp tl494/tl494.sub ~/.wine/drive_c/Program\ Files/LTC/LTspiceIV/lib/sub/
+cp tl494/tl494.asy ~/.wine/drive_c/Program\ Files/LTC/LTspiceIV/lib/asy/

@@ -17530,10 +17530,11 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <text x="-60.96" y="101.6" size="1.778" layer="97">battery connector</text>
 <text x="551.18" y="101.6" size="1.778" layer="97">output connector</text>
 <text x="111.76" y="20.32" size="1.778" layer="97">38 - 77 hz square wave generation stage</text>
-<text x="119.38" y="-22.86" size="1.778" layer="97">butterworth filter (fc = 50hz)</text>
-<text x="119.38" y="-53.34" size="1.778" layer="97">butterworth filter (fc = 90hz)</text>
+<text x="119.38" y="-22.86" size="1.778" layer="97">butterworth lowpass filter (fc = 50hz)</text>
+<text x="119.38" y="-53.34" size="1.778" layer="97">butterworth lowpass filter (fc = 90hz)</text>
 <text x="111.76" y="17.78" size="1.778" layer="97">if R_VAR = 10.7K, freq = 50 hz</text>
 <text x="119.38" y="-86.36" size="1.778" layer="97">high pass filter (fc = 25hz)</text>
+<text x="228.6" y="99.06" size="1.778" layer="97">outputs the rectified waveforms</text>
 </plain>
 <instances>
 <instance part="U2" gate="A" x="12.7" y="-22.86"/>

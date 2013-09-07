@@ -1,0 +1,43 @@
+* TL494.asc
+*              1    2   3   4  5  6   7  8  9  10 11 12  13  14  15   16
+.subckt tl494 1IN+ 1IN- FB DTC CT RT GND C1 E1 E2 C2 VCC OC REF 2IN- 2IN+
+XEA1 1IN+ 1IN- VCC 0 N015 level.2 Avol=1e5 GBW=1Meg Slew=10k ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=1Meg
+XEA2 2IN+ 2IN- VCC 0 N016 level.2 Avol=1e5 GBW=1Meg Slew=10k ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=1Meg
+V§DT N007 DTC 0.12
+V2 N014 CT 0.7
+A1 0 N005 0 N011 0 0 N009 0 OR vhigh=4.8 td=50n
+A2 0 N006 0 N009 0 N002 0 0 OR vhigh=4.8 td=50n
+A3 0 N010 0 N009 0 N012 0 0 OR vhigh=4.8 td=50n
+A4 0 OC` 0 N008 0 0 N006 0 AND vhigh=4.8 td=50n
+A5 0 N004 0 OC` 0 0 N010 0 AND vhigh=4.8 td=50n
+E1 OC` 0 OC 0 1
+A6 N004 0 N009 N001 0 N004 N008 0 DFLOP vhigh=4.8 vlow=0.2 td=50n
+I2 FB 0 0.7m
+R1 N003 N002 470
+R2 N013 N012 470
+R4 N003 E1 2k7
+R5 N013 E2 2k7
+Q3 RT RT Ref 0 PNP
+Q4 CT RT Ref 0 PNP
+S1 0 CT ctl 0 SW off
+A10 CT 0 0 0 0 0 ctl 0 SCHMITT vhigh=1 vlow=-1 vt=1.5 vh=1.495 td=10n tripdt=1n
+R3 VCC Ref 270
+R6 N001 0 470
+C1 N001 VCC 1n
+XU1 N007 CT VCC 0 N005 level.2 Avol=1G GBW=1G Slew=1G ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU2 FB N014 VCC 0 N011 level.2 Avol=1G GBW=1G Slew=1G ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+Q1 C1 N003 E1 0 NPN
+Q2 C2 N013 E2 0 NPN
+D3 0 Ref DZ
+D1 N016 FB D
+D2 N015 FB D
+D4 N001 VCC D
+D5 0 N001 D
+.model D D
+.model NPN NPN
+.model PNP PNP
+.model sw sw(ron=1)
+.lib ltc.lib
+.model dz d(vrev=5)
+.lib UniversalOpamps2.sub
+.ends tl494

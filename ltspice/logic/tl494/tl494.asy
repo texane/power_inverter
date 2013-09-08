@@ -5,7 +5,7 @@ WINDOW 0 -78 -139 Left 0
 WINDOW 3 43 138 Center 0
 SYMATTR Value TL494
 SYMATTR Prefix x
-SYMATTR ModelFile eigene/TL494.sub
+SYMATTR ModelFile TL494.sub
 PIN -80 -112 LEFT 8
 PINATTR PinName 1IN+
 PINATTR SpiceOrder 1

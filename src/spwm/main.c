@@ -81,6 +81,8 @@ static uint16_t gen_half_sine(uint16_t fsampl, uint16_t fsine, uint16_t* p)
 
 static void print_table(const uint16_t* p, uint16_t n)
 {
+  /* plot '/tmp/o' using 2 with lines lw 3, '' using 3 with lines */
+
   uint16_t i;
 
   for (i = 0; i < n; ++i)

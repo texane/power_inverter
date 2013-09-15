@@ -103,7 +103,7 @@ static int16_t cos_fix(uint16_t x)
   y = FIXED(1, 16) - x;         // .16
   s = FIXED(0.23361, 16) - mul_high_bytes(FIXED(0.019531, 16), x); // .16
   s = FIXED(1, 16) - mul_fix_u16(x, s);  // .16
-  s = mul_fix_u16(y >> 1, s);        // .15
+  s = mul_fix_u16(y, s) >> 1;        // .15
   return (i == 0x40 || i == 0x80) ? -s : s;
 }
 

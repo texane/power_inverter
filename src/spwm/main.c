@@ -11,11 +11,10 @@
  */
 
 #include <stdint.h>
-#include <stdio.h>
 #include "sin_fix_u16.h"
 
 /* the carrier sampling frequency, in hertz */
-#define CONFIG_FSAMPL ((uint16_t)1000)
+#define CONFIG_FSAMPL ((uint16_t)5000)
 
 /* the sine frequency, in hertz */
 #define CONFIG_FSINE ((uint16_t)50)
@@ -62,7 +61,7 @@ static uint16_t gen_half_sine(uint16_t fsampl, uint16_t fsine, uint16_t* p)
   /* p the resulting table */
 
   uint16_t n = fsampl / fsine;
-  const uint16_t d = (1UL << 16) / n;
+  const uint16_t d = 1 + (1UL << 16) / n;
   uint16_t i;
   uint16_t x;
 
@@ -74,15 +73,31 @@ static uint16_t gen_half_sine(uint16_t fsampl, uint16_t fsine, uint16_t* p)
   return n;
 }
 
+
+#if (CONFIG_UNIT == 1) /* unit testing */
+
+#include <stdio.h>
+#include <math.h>
+
 static void print_table(const uint16_t* p, uint16_t n)
 {
   uint16_t i;
-  for (i = 0; i < n; ++i) printf("%d %u\n", i, p[i]);
+
+  for (i = 0; i < n; ++i)
+  {
+    const double y =
+      65536.0 * sin(((double)i * 2.0 * M_PI * CONFIG_FSINE) / CONFIG_FSAMPL);
+    printf("%d %u %lf\n", i, p[i], y);
+  }
 }
+
+#endif /* unit testing */
 
 int main(int ac, char** av)
 {
   nduties = gen_half_sine(CONFIG_FSAMPL, CONFIG_FSINE, pwm_duties);
+#if (CONFIG_UNIT == 1)
   print_table(pwm_duties, nduties);
+#endif
   return 0;
 }

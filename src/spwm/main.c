@@ -64,13 +64,7 @@ static uint16_t gen_half_sine(void)
 
 static inline void pwm_set_duty(uint16_t x)
 {
-  /* warning: do not use TCNT1 directly as */
-  /* this routine can be called from isr */
-
-  TCCR1B = 0;
-  /* TCNT1 = 0; */
   OCR1A = x;
-  TCCR1B = (0x3 << 3) | (0x1 << 0);
 }
 
 static void pwm_disable(void)
@@ -97,7 +91,7 @@ static void pwm_enable(void)
   ICR1 = 0x3ff;
 
   /* output compare, ie. duty */
-  OCR1A = 0x80;
+  OCR1A = 0x0;
 
   /* unused */
   TCCR1C = 0;

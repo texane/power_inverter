@@ -11,38 +11,22 @@
  */
 
 #include <stdint.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
 #include "sin_fix_u16.h"
 
 /* the carrier sampling frequency, in hertz */
-#define CONFIG_FSAMPL ((uint16_t)5000)
+#define CONFIG_FSAMPL ((uint16_t)50000)
 
 /* the sine frequency, in hertz */
 #define CONFIG_FSINE ((uint16_t)50)
 
 /* global pwm duty table */
-static uint16_t pwm_duties[4096];
+static volatile uint16_t pwm_duties[512];
 
 /* pwm duty table size */
-static uint16_t nduties = 0;
+static volatile uint16_t nduties = 0;
 
-
-#if 0
-
-static volatile uint8_t br_side;
-
-static void on_isr(void)
-{
-  pwm_set_duty(pwm_duty[i]);
-
-  if (++i == nsampl)
-  {
-    /* toggle ctl bit */
-    br_set_side(br_side);
-    br_side ^= 1;
-    i = 0;
-  }
-}
-#endif
 
 #if 0
 static void on_button(void)
@@ -54,13 +38,11 @@ static void on_button(void)
 #endif
 
 
-static uint16_t gen_half_sine(uint16_t fsampl, uint16_t fsine, uint16_t* p)
+static uint16_t gen_half_sine(void)
 {
-  /* fsampl, the sampling frequency */
-  /* fsine, the sine frequency */
   /* p the resulting table */
 
-  uint16_t n = fsampl / fsine;
+  uint16_t n = CONFIG_FSAMPL / CONFIG_FSINE;
   const uint16_t d = 1 + (1UL << 16) / n;
   uint16_t i;
   uint16_t x;
@@ -68,9 +50,122 @@ static uint16_t gen_half_sine(uint16_t fsampl, uint16_t fsine, uint16_t* p)
   /* only interested in half wave */
   n = 1 + n / 2;
 
-  for (i = 0, x = 0; i < n; ++i, x += d) p[i] = sin_fix_u16(x);
+  for (i = 0, x = 0; i < n; ++i, x += d)
+  {
+    /* compare and match counter resolution is 10 bits */
+    pwm_duties[i] = sin_fix_u16(x) >> 6;
+  }
 
   return n;
+}
+
+
+/* 16 bits pwm, counter 1 */
+
+static inline void pwm_set_duty(uint16_t x)
+{
+  /* warning: do not use TCNT1 directly as */
+  /* this routine can be called from isr */
+
+  TCCR1B = 0;
+  /* TCNT1 = 0; */
+  OCR1A = x;
+  TCCR1B = (0x3 << 3) | (0x1 << 0);
+}
+
+static void pwm_disable(void)
+{
+  TCCR1B = 0;
+}
+
+static void pwm_enable(void)
+{
+  /* disable pwm */
+  pwm_disable();
+
+  /* io port */
+  DDRB |= 1 << 1;
+
+  /* non inverting mode: set at bottom, clear on compare and match */
+  /* use ICR1 as top register */
+  TCCR1A = (0x2 << 6) | (0x2 << 0);
+
+  /* counter */
+  TCNT1 = 0;
+
+  /* count from 0 to top */
+  ICR1 = 0x3ff;
+
+  /* output compare, ie. duty */
+  OCR1A = 0x80;
+
+  /* unused */
+  TCCR1C = 0;
+
+  /* interrupt disabled */
+  TIMSK1 = 0;
+
+  /* no prescaler, 16MHz */
+  TCCR1B = (0x3 << 3) | (0x1 << 0);
+
+  /* pwm started from here */
+}
+
+
+/* 8 bits timer, counter 0 */
+
+static volatile uint16_t timer_pos = 0;
+static volatile uint8_t timer_side = 0;
+
+ISR(TIMER0_COMPA_vect)
+{
+#if 0 /* toremove */
+  ++timer_pos;
+  PORTB = (timer_pos & 1) << 1;
+#endif /* toremove */
+
+  pwm_set_duty(pwm_duties[timer_pos]);
+
+  if ((++timer_pos) == nduties)
+  {
+    timer_pos = 0;
+    timer_side ^= 1;
+    /* todo: set_side(br_side); */
+  }
+}
+
+static void timer_disable(void)
+{
+  TCCR0B = 0;
+}
+
+static void timer_enable(void)
+{
+  /* fcpu / (fsampl * prescal) = counter */
+  /* fcpu = 16000000 */
+  /* fsampl = 50000 */
+  /* prescal = 8 */
+  /* counter = 40 */
+
+  /* disable timer */
+  timer_disable();
+
+  /* ctc mode, clear on OCRA0 */
+  TCCR0A = 0x2 << 0;
+
+  /* counter */
+  TCNT0 = 0;
+
+  /* timer top value */
+  OCR0A = 40;
+
+  /* interrupt on compare match */
+  TIMSK0 = 0x1 << 1;
+
+  /* prescaler = 8 */
+  TCCR0B = 0x2 << 0;
+
+  /* timer started from here */
 }
 
 
@@ -95,11 +190,24 @@ static void print_table(const uint16_t* p, uint16_t n)
 
 #endif /* unit testing */
 
-int main(int ac, char** av)
+int main(void)
 {
-  nduties = gen_half_sine(CONFIG_FSAMPL, CONFIG_FSINE, pwm_duties);
+  /* generate the half sine table */
+  nduties = gen_half_sine();
 #if (CONFIG_UNIT == 1)
   print_table(pwm_duties, nduties);
 #endif
+
+  /* enable timer */
+  timer_enable();
+
+  /* enable pwm */
+  pwm_enable();
+
+  /* enable interrupts */
+  sei();
+
+  while (1) ;
+
   return 0;
 }

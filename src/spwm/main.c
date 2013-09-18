@@ -113,18 +113,16 @@ static volatile uint8_t timer_side = 0;
 
 ISR(TIMER0_COMPA_vect)
 {
-#if 0 /* toremove */
-  ++timer_pos;
-  PORTB = (timer_pos & 1) << 1;
-#endif /* toremove */
-
   pwm_set_duty(pwm_duties[timer_pos]);
 
   if ((++timer_pos) == nduties)
   {
     timer_pos = 0;
+
+#define CONFIG_SIDE_SHIFT 2
     timer_side ^= 1;
-    /* todo: set_side(br_side); */
+    if (timer_side & 1) PORTB |= 1 << CONFIG_SIDE_SHIFT;
+    else PORTB &= ~(1 << CONFIG_SIDE_SHIFT);
   }
 }
 
@@ -191,6 +189,8 @@ int main(void)
 #if (CONFIG_UNIT == 1)
   print_table(pwm_duties, nduties);
 #endif
+
+  DDRB |= 1 << CONFIG_SIDE_SHIFT;
 
   /* enable timer */
   timer_enable();

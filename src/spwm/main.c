@@ -28,16 +28,6 @@ static volatile uint16_t pwm_duties[512];
 static volatile uint16_t nduties = 0;
 
 
-#if 0
-static void on_button(void)
-{
-  read_adc();
-  pwm_disable();
-  nsampl = generate_duties(fsampl, fsine, duties);
-}
-#endif
-
-
 static uint16_t gen_half_sine(void)
 {
   /* p the resulting table */

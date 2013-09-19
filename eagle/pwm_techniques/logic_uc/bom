@@ -1,0 +1,112 @@
+todo: m3 screw
+todo: heatsink
+todo: thermal paste
+todo: connectors
+
+--
+desc: capa 100 nf
+url: http://fr.farnell.com/avx/12061c104kat2a/condensateur-1206-100nf-100v-x7r/dp/1327703
+ref farnell: 1327703
+ref fabricant: 12061C104KAT2A
+price: 0.182
+qtity: 30
+eagle:
+
+--
+desc: capa 470 nf
+url: http://fr.farnell.com/avx/12065c474jat2a/condensateur-mlcc-1206-50v-470nf/dp/1740705
+ref farnell: 1740705
+ref fabricant: 12065C474JAT2A
+price: 0.27
+qtity: 30
+eagle:
+
+--
+desc: capa 1 uf
+url: http://fr.farnell.com/avx/12063c105kat2a/condensateur-1206-1000nf-25v-x7r/dp/1327717
+ref farnell: 1327717
+ref fabricant: 12063C105KAT2A
+price: 0.189
+qtity: 30
+eagle:
+
+--
+desc: capa pol electrolyte 22 uf
+url: http://fr.farnell.com/panasonic/eee1ea220sp/condensateur-boitier-d-22uf-25v/dp/9696970
+ref farnell: 9696970
+ref fabricant: EEE1EA220SP
+price: 0.169
+qtity: 10
+eagle: 
+
+--
+desc: BOURNS - CRM1206-FX-51R0ELF - RESISTANCE 1206 51R 1%
+url: http://fr.farnell.com/bourns/crm1206-fx-51r0elf/resistance-1206-51r-1/dp/1865251
+ref farnell: 1865251
+ref fabricant: CRM1206-FX-51R0ELF
+price: 0.045
+qtity: 20
+eagle:
+
+--
+desc: ldo voltage regulator 10 v
+url: http://fr.farnell.com/texas-instruments/lm2940t-10-0/regulateur-ldo-10v/dp/9493522
+ref farnell: 9493522
+ref fabricant:
+price: 1.80 euros
+qtity: 2 to 5
+eagle: lm2940t_10
+
+--
+desc: TEXAS INSTRUMENTS - SN74LS08D - CI LOGIQUE PORTE ET QUAD 2 ENTREES CMS
+url: http://fr.farnell.com/texas-instruments/sn74ls08d/ci-logique-porte-quad-2-entrees/dp/1287549
+ref farnell: 1287549
+ref fabricant: SN74LS08D
+price: 0.72
+qtity: 4
+eagle: sn74ls08d
+
+--
+desc: TEXAS INSTRUMENTS - SN74HCT04D - INVERSEURS HEX CMS
+url: http://fr.farnell.com/texas-instruments/sn74hct04d/inverseurs-hex-cms/dp/9591761
+ref farnell: 9591761
+ref fabricant: SN74HCT04D
+price: 0.26
+qtity: 4
+eagle: sn74hct04d
+
+--
+desc: INTERNATIONAL RECTIFIER - IR2304SPBF - DRIVER DE MOSFET CMS HI & LOW SIDE
+url: http://fr.farnell.com/international-rectifier/ir2304spbf/driver-de-mosfet-cms-hi-low-side/dp/1023256
+ref farnell: 1023256
+ref fabricant: IR2304SPBF
+price: 1.87
+qtity: 4
+eagle: ir2304
+
+--
+desc: VISHAY FORMERLY I.R. - IRFP460APBF - TRANS. MOSFET CANAL N TO-247AC 500V 20A
+url: http://fr.farnell.com/vishay-formerly-i-r/irfp460apbf/trans-mosfet-canal-n-to-247ac-500v/dp/8649421
+ref farnell: 8649421
+ref fabricant: IRFP460APBF
+price: 4.67
+qtity: 6
+eagle: irfp460a
+
+--
+desc: MULTICOMP - 1N4004 - DIODE 1A 400V 
+url: http://fr.farnell.com/multicomp/1n4004/diode-1a-400v/dp/9565027
+ref farnell: 9565027
+ref fabricant: 1N4004
+price: 0.104
+qtity: 10
+eagle:
+
+--
+desc:
+url: http://fr.farnell.com/murata-power-solutions/1410524c/bobbin-inductor-1mh-2-4a-10-1mhz/dp/2309153
+ref farnell: 2309153
+ref fabricant: 1410524C
+price: 8.37
+qtity: 1
+eagle:

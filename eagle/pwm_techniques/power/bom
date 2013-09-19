@@ -1,10 +1,25 @@
 todo: m3 screw
 todo: heatsink
 todo: thermal paste
-todo: caps
-todo: diodes
-todo: inductor
 todo: connectors
+
+--
+desc: TEXAS INSTRUMENTS - SN74LS08D - CI LOGIQUE PORTE ET QUAD 2 ENTREES CMS
+url: http://fr.farnell.com/texas-instruments/sn74ls08d/ci-logique-porte-quad-2-entrees/dp/1287549
+ref farnell: 1287549
+ref fabricant: SN74LS08D
+price: 0.72
+qtity: 4
+eagle: sn74ls08d
+
+--
+desc: TEXAS INSTRUMENTS - SN74LS08D - CI LOGIQUE PORTE ET QUAD 2 ENTREES CMS
+url: http://fr.farnell.com/texas-instruments/sn74ls04nsr/circuit-logique-inverseur-hex-cms/dp/1236241
+ref farnell: 1236241
+ref fabricant: SN74LS04NSR
+price:
+qtity: 4
+eagle:
 
 --
 desc: INTERNATIONAL RECTIFIER - IR2304SPBF - DRIVER DE MOSFET CMS HI & LOW SIDE
@@ -12,7 +27,7 @@ url: http://fr.farnell.com/international-rectifier/ir2304spbf/driver-de-mosfet-c
 ref farnell: 1023256
 ref fabricant: IR2304SPBF
 price: 1.87
-qtity: 2
+qtity: 4
 eagle: ir2304
 
 --
@@ -24,12 +39,20 @@ price: 4.67
 qtity: 6
 eagle: irfp460a
 
+--
+desc: MULTICOMP - 1N4004 - DIODE 1A 400V 
+url: http://fr.farnell.com/multicomp/1n4004/diode-1a-400v/dp/9565027
+ref farnell: 9565027
+ref fabricant: 1N4004
+price: 0.104
+qtity: 10
+eagle:
 
 --
 desc:
-url:
-ref farnell:
-ref fabricant:
-price:
-qtity:
+url: http://fr.farnell.com/murata-power-solutions/1410524c/bobbin-inductor-1mh-2-4a-10-1mhz/dp/2309153
+ref farnell: 2309153
+ref fabricant: 1410524C
+price: 8.37
+qtity: 1
 eagle:

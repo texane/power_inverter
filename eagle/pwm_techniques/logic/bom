@@ -53,6 +53,15 @@ qtity: 20
 eagle:
 
 --
+desc: capa 15 uf, high voltage
+url:
+ref farnell:
+ref fabricant:
+price:
+qtity: 10
+eagle:
+
+--
 desc: capa pol electrolyte 22 uf
 url:
 ref farnell:

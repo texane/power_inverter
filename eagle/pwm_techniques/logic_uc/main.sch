@@ -9396,12 +9396,10 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <part name="IR2304_0" library="ir2304" deviceset="IR2304" device=""/>
 <part name="UC_CON" library="con-lstb" deviceset="MA08-1" device=""/>
 <part name="D1" library="diode" deviceset="1N4004" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C1206" value="1u"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C1206" value="1u"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C1206" value="100n"/>
 <part name="IR2304_1" library="ir2304" deviceset="IR2304" device=""/>
 <part name="D2" library="diode" deviceset="1N4004" device=""/>
-<part name="C4" library="rcl" deviceset="C-EU" device="C1206" value="1u"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C1206" value="1u"/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C1206" value="100n"/>
 <part name="U1" library="sn74ls08d" deviceset="SN74LS08D" device=""/>
@@ -9427,23 +9425,25 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <part name="C12" library="Panasonic-EEE0_EEE1_EEE2_EEEFC" deviceset="EEE-" device="-CASE-D" technology="1EA220SP" value="22UF"/>
 <part name="IC2" library="linear" deviceset="*317" device="EMP"/>
 <part name="IC1" library="national-semiconductor" deviceset="LM2936MP?*" device="" technology="-3.0"/>
+<part name="C13" library="rcl" deviceset="C-EU" device="C2220K" value="1u"/>
+<part name="C14" library="rcl" deviceset="C-EU" device="C2220K" value="1u"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-83.82" y="43.18" size="1.778" layer="97">WARNING: actually a LM2940</text>
 <text x="-83.82" y="0" size="1.778" layer="97">WARNING: actually a AP1117</text>
+<text x="144.78" y="43.18" size="1.778" layer="97">TODO: diode package is SOD106</text>
+<text x="144.78" y="7.62" size="1.778" layer="97">TODO: diode package is SOD106</text>
 </plain>
 <instances>
 <instance part="IR2304_0" gate="G$1" x="149.86" y="27.94"/>
 <instance part="UC_CON" gate="1" x="-124.46" y="7.62" rot="R180"/>
 <instance part="D1" gate="1" x="160.02" y="40.64"/>
-<instance part="C1" gate="G$1" x="190.5" y="38.1"/>
 <instance part="C2" gate="G$1" x="119.38" y="22.86"/>
 <instance part="C3" gate="G$1" x="127" y="22.86"/>
 <instance part="IR2304_1" gate="G$1" x="149.86" y="-7.62"/>
 <instance part="D2" gate="1" x="160.02" y="5.08"/>
-<instance part="C4" gate="G$1" x="190.5" y="0"/>
 <instance part="C5" gate="G$1" x="119.38" y="-12.7"/>
 <instance part="C6" gate="G$1" x="127" y="-12.7"/>
 <instance part="U1" gate="A" x="71.12" y="12.7"/>
@@ -9469,6 +9469,8 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <instance part="C12" gate="A" x="-86.36" y="-15.24" rot="R270"/>
 <instance part="IC2" gate="A1" x="-68.58" y="-12.7"/>
 <instance part="IC1" gate="G$1" x="-68.58" y="30.48"/>
+<instance part="C13" gate="G$1" x="190.5" y="35.56"/>
+<instance part="C14" gate="G$1" x="190.5" y="0"/>
 </instances>
 <busses>
 </busses>
@@ -9643,9 +9645,10 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <wire x1="165.1" y1="33.02" x2="165.1" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="D1" gate="1" pin="C"/>
 <wire x1="165.1" y1="40.64" x2="162.56" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="40.64" x2="190.5" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="40.64" x2="190.5" y2="38.1" width="0.1524" layer="91"/>
 <junction x="165.1" y="40.64"/>
+<pinref part="C13" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="Q0_GATE" class="0">
@@ -9679,10 +9682,10 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <wire x1="172.72" y1="-2.54" x2="172.72" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="D2" gate="1" pin="C"/>
 <wire x1="172.72" y1="5.08" x2="162.56" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="5.08" x2="190.5" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="5.08" x2="190.5" y2="2.54" width="0.1524" layer="91"/>
 <junction x="172.72" y="5.08"/>
+<pinref part="C14" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="Q2_GATE" class="0">
@@ -9711,13 +9714,13 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 </net>
 <net name="LOAD_P" class="0">
 <segment>
-<pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="IR2304_0" gate="G$1" pin="VS"/>
-<wire x1="190.5" y1="33.02" x2="190.5" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="30.48" x2="190.5" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="27.94" x2="160.02" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="27.94" x2="203.2" y2="27.94" width="0.1524" layer="91"/>
 <junction x="190.5" y="27.94"/>
 <label x="193.04" y="27.94" size="1.778" layer="95"/>
+<pinref part="C13" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="HBR_CON" gate="1" pin="6"/>
@@ -9727,13 +9730,13 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 </net>
 <net name="LOAD_N" class="0">
 <segment>
-<pinref part="C4" gate="G$1" pin="2"/>
 <pinref part="IR2304_1" gate="G$1" pin="VS"/>
 <wire x1="190.5" y1="-5.08" x2="190.5" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="-7.62" x2="160.02" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="-7.62" x2="203.2" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="190.5" y="-7.62"/>
 <label x="193.04" y="-7.62" size="1.778" layer="95"/>
+<pinref part="C14" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <label x="-152.4" y="-25.4" size="1.778" layer="95"/>

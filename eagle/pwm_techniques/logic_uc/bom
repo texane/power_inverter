@@ -49,13 +49,22 @@ qtity: 20
 eagle:
 
 --
-desc: ldo voltage regulator 10 v
-url: http://fr.farnell.com/texas-instruments/lm2940t-10-0/regulateur-ldo-10v/dp/9493522
-ref farnell: 9493522
-ref fabricant:
-price: 1.80 euros
-qtity: 2 to 5
-eagle: lm2940t_10
+desc: TEXAS INSTRUMENTS - LM2940IMP-10/NOPB - IC, LDO REG
+url: http://fr.farnell.com/texas-instruments/lm2940imp-10-nopb/ic-ldo-reg/dp/1685531
+ref farnell: 1685531
+ref fabricant: LM2940IMP-10/NOPB
+price: 1.60
+qtity: 5
+eagle:
+
+--
+desc: DIODES INC. - AP1117E50G-13 - REGULATEUR LDO 5V SOT223
+url: http://fr.farnell.com/diodes-inc/ap1117e50g-13/regulateur-ldo-5v-sot223/dp/1825292
+ref farnell: 1825292
+ref fabricant: AP1117E50G-13
+price: 0.5
+qtity: 5
+eagle:
 
 --
 desc: TEXAS INSTRUMENTS - SN74LS08D - CI LOGIQUE PORTE ET QUAD 2 ENTREES CMS

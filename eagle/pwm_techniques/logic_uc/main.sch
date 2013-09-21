@@ -9965,9 +9965,9 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <label x="175.26" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-132.08" y1="-17.78" x2="-152.4" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-152.4" y="-17.78" size="1.778" layer="95"/>
-<pinref part="HBR_CON1" gate="1" pin="2"/>
+<wire x1="-132.08" y1="-20.32" x2="-152.4" y2="-20.32" width="0.1524" layer="91"/>
+<label x="-152.4" y="-20.32" size="1.778" layer="95"/>
+<pinref part="HBR_CON1" gate="1" pin="3"/>
 </segment>
 </net>
 <net name="Q1_GATE" class="0">
@@ -9977,9 +9977,9 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <label x="175.26" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-132.08" y1="-20.32" x2="-152.4" y2="-20.32" width="0.1524" layer="91"/>
-<label x="-152.4" y="-20.32" size="1.778" layer="95"/>
-<pinref part="HBR_CON1" gate="1" pin="3"/>
+<wire x1="-132.08" y1="-17.78" x2="-152.4" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-152.4" y="-17.78" size="1.778" layer="95"/>
+<pinref part="HBR_CON1" gate="1" pin="2"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -10002,9 +10002,9 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <label x="175.26" y="-5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-132.08" y1="-22.86" x2="-152.4" y2="-22.86" width="0.1524" layer="91"/>
-<label x="-152.4" y="-22.86" size="1.778" layer="95"/>
-<pinref part="HBR_CON1" gate="1" pin="4"/>
+<wire x1="-132.08" y1="-25.4" x2="-152.4" y2="-25.4" width="0.1524" layer="91"/>
+<label x="-152.4" y="-25.4" size="1.778" layer="95"/>
+<pinref part="HBR_CON1" gate="1" pin="5"/>
 </segment>
 </net>
 <net name="Q3_GATE" class="0">
@@ -10014,9 +10014,9 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <label x="175.26" y="-10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-132.08" y1="-25.4" x2="-152.4" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-152.4" y="-25.4" size="1.778" layer="95"/>
-<pinref part="HBR_CON1" gate="1" pin="5"/>
+<wire x1="-132.08" y1="-22.86" x2="-152.4" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-152.4" y="-22.86" size="1.778" layer="95"/>
+<pinref part="HBR_CON1" gate="1" pin="4"/>
 </segment>
 </net>
 <net name="LOAD_P" class="0">
